@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>yolo-bear</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="The Chopping Block, Inc." />
+	<meta name="geo.country" content="US" />
+	<meta name="dc.language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<style type="text/css" media="screen">		
+		/*local styles if any (quick tests and local only overrides)*/
+	</style>
+</head>
+<body>
+
+	<div id="first_element" class="wrap" >
+		Javascript - 
+	
+	</div>
+	
+	<button id="click_me_button">Click me</button>
+	
+	<input type="text" name="name_field" value="" id="name_field">
+	
+	
+	<script src="app.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		//Single line comment
+		
+		/*
+		* Multi-line comment
+		*/
+		
+		// We made a variable
+		// the variable name is first_name
+		// the variable's value is Eric
+		// the variable contains the string Eric
+		// A single equal sign is called the assignment operator
+		
+		var first_name = "Eric";
+		// This don't work: "Eric" = first_name
+		
+		//Strings which are a bunch of letters/numbers/symbols
+		
+		var last_name = "Haseltine";
+		var office = "155 Water Street";
+		var city_state = "Brooklyn \n New York";
+		
+		
+		// Integers (Whole numbers from -infinity to +infinity)
+		// Really just means NO DECIMALS
+		
+		var address = 155;
+		
+		// Floats
+		
+		var height = 5.8;
+		
+		
+		//Boolean Values
+		// True or False
+		var is_alive = true;
+		
+		
+		//Arrays are list of things
+		
+		var some_numbers = [0,10,1204,1250124];
+		// Arrays have length (4)
+		// Each place in an array has an index
+		// The indexes run from 0 to length-1 (0,3)
+		// 0-indexing
+		
+		//This the length of the array (4)
+		var length_array = some_numbers.length;
+		//To get a value out of an array
+		//First thing in that array
+		some_numbers[0];
+		
+		//Changing the value of the first element in the array to 5
+		some_numbers[0] = 5;
+		
+		var one_number = some_numbers[0];
+		//Now one_number contains 0
+		
+		one_number = some_numbers[3];
+		//Now one_number contains 1250124 
+		
+		
+		console.log("Some message");
+		
+		var some_variable = 8;
+		console.log('some_variable is: '+some_variable);
+		
+
+		
+		//These are all defined by the browser
+		//console - The web inspector/javascript console
+		//window - the browser window
+		//document - the html document we are in
+		
+		//document.getElementById() allows us to get a reference to an element on the page
+		var div = document.getElementById("first_element");
+		div.innerHTML //contains the HTML inside the tag
+		
+		//Retrieve the value of the property
+		var that_html = div.innerHTML;
+		
+		//Set the value of the property
+		div.innerHTML = "this html";
+		
+		
+
+		//This returns an array of all the div tags
+		var list_of_elements = document.getElementsByTagName('div');
+
+
+		
+		var input = document.getElementById('name_field');
+		input.value //contains the text inside the input
+		
+		var field_value = input.value;
+		input.value = "Enter your name";
+		
+		
+		
+		var button = document.getElementById('click_me_button');
+		button.onclick = function(){
+		
+		
+			//A reference to the div#first_element was stored in the varible div on line 108
+			//A refernce to the input#name_field was stored in the variable input on line 124
+			
+			// #1
+			// div.innerHTML = input.value;
+			
+			// #2
+			// input.value = div.innerHTML;
+		
+			
+			// #3
+			div.innerHTML = div.innerHTML + " " + input.value + div.innerHTML;
+		
+			console.log(input.value);
+			
+			
+		}
+		
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
